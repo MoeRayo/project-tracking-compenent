@@ -10,6 +10,10 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Frontend Mentor | Project tracking intro component</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -26,29 +30,32 @@
 
   <body>
     <div id="wrapper">
-      <section class="image-container">
-        <nav>
-          <ul>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Login</a></li>
-          </ul>
-        </nav>
-        <div>
-          <img
-            src="./images/illustration-devices.svg"
-            alt="illustration-devices"
-          />
-        </div>
-      </section>
-      <section class="info-container">
+      <div class="logo">
         <img src="./images/logo.svg" alt="logo" />
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+      </nav>
+      <!-- <section></section> -->
+      <section class="info-container">
         <p><span>New</span> Monograph Dashboard</p>
         <h1>Powerful insights into your team</h1>
         <h3>Project planning and time tracking for agile teams</h3>
 
         <p><button>Schedule a demo</button> to see a live preview</p>
+      </section>
+
+      <section class="image-container">
+        <img
+          src="./images/illustration-devices.svg"
+          alt="illustration-devices"
+        />
       </section>
 
       <footer>

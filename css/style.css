@@ -9,6 +9,8 @@
 
 body {
   box-sizing: inherit;
+  font-size: 1.15rem;
+  overflow: hidden;
 }
 
 ul {
@@ -35,9 +37,7 @@ li:last-of-type::marker {
 
 [src$="svg"] {
   display: block;
-  margin: 0 auto;
   height: auto;
-  max-width: 100%;
 }
 
 [id="wrapper"] {
@@ -45,19 +45,36 @@ li:last-of-type::marker {
   width: 100vw;
   display: grid;
   grid-template-areas:
+    "logo logo logo navi navi navi"
     "infoContainer infoContainer infoContainer imageContainer imageContainer imageContainer"
-    "footer footer footer footer footer footer ";
-  grid-template-rows: auto 40px;
+    "footer footer footer footer footer footer";
+  grid-template-rows: 100px auto 40px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.logo {
+  grid-area: logo;
+  align-self: center;
+  justify-self: center;
+}
+
+nav {
+  grid-area: navi;
+  justify-self: stretch;
+  align-self: center;
 }
 
 section:first-of-type {
-  /* background-color: red; */
+  grid-area: infoContainer;
+}
+
+section:last-of-type {
   grid-area: imageContainer;
 }
-section:last-of-type {
-  /* background-color: gray; */
-  grid-area: infoContainer;
-  justify-self: center;
+
+section:last-of-type img {
+  max-width: 100%;
+  translate: 16.5rem;
 }
 
 /* footer */
